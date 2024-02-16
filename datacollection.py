@@ -14,3 +14,11 @@ folder = "C:\Users\vashu\Documents\SignToText\Data\Hello"
 
 while True :
     success , img = cap.read ()
+    hands , img = detector.findHands(img)
+    if hands : 
+        hand =  hands [0]
+        x,y,w,h = hand ['bbox']
+
+        imgWhite = np.ones((imgSize,imgSize,3),np.uint8)*255
+
+        imgCrop = img[y-offset]
