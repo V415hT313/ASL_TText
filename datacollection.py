@@ -10,4 +10,7 @@ offset = 20
 imgSize = 300
 counter = 0
 
-folder = 
+folder = "C:\Users\vashu\Documents\SignToText\Data\Hello"
+
+while True :
+    success , img = cap.read ()
