@@ -21,4 +21,5 @@ while True :
 
         imgWhite = np.ones((imgSize,imgSize,3),np.uint8)*255
 
-        imgCrop = img[y-offset]
+        imgCrop = img[y-offset : y + h + offset , x-offset : x + w + offset]
+        imgCropShape = imgCrop.shape
